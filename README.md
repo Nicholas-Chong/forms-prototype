@@ -29,3 +29,68 @@ The initial design had the different types of responses stored in seperate table
 
 I decided it was not worth the complexity of storing different response types in seperate tables, and modified the design to store all responses in one table. 
 
+### Conditional Fields (To be implemented)
+
+The Dependency table holds a respective fields dependencies. It is effectively a "circular" relationship between Field -> Dependency -> Field. Conditional fields should be rendered if all its dependancies have been filled in.
+
+# Front End React Client
+
+The front end client is a **React Single Page Application (SPA).** 
+
+## Rendering the Form
+
+The SPA calls the backend ```/form/{form id}``` endpoint to retrieve a form. The form data is then parsed and rendered in React. 
+
+```json
+{
+    "prompts": [
+        {
+            "type_of": "boolean",
+            "is_required": true,
+            "prompt": "Are you taller than The Rock?",
+            "dependencies": []
+        },
+        {
+            "type_of": "text",
+            "is_required": true,
+            "prompt": "What country are you from?",
+            "dependencies": []
+        }
+    ],
+    "name": "The Test POST Form",
+    "creator": "Nicholas Chong"
+}
+```
+
+## Collecting and Submitting Responses
+
+When a input field is modified, the SPA updates a list of responses. When the user submits the form, this list of responses is sent to the API via a POST request.
+
+```json
+[
+    {
+        "response": "True",
+        "form": 1,
+        "respondant": 1,
+        "field": 1
+    },
+    {
+        "response": "False",
+        "form": 1,
+        "respondant": 1,
+        "field": 1
+    },
+    {
+        "response": "True",
+        "form": 1,
+        "respondant": 1,
+        "field": 1
+    },
+    {
+        "response": "True",
+        "form": 1,
+        "respondant": 1,
+        "field": 1
+    }
+]
+```
