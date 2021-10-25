@@ -6,7 +6,7 @@ This project includes the prototype backend and frontend code for the Forms App.
 
 ## Tech Stack
 
-The backend is built on the **Django Rest Framework (DRF).** DRF provides a toolkit for building REST APIs. Key built in features include data serialization and Oauth1/Oauth2 support. DRF's flexibility also makes it easy to add new endpoints, ensuring that our API service can continue to expand as the product grows. DRF has been proven to work at scale, large companies like Red Hat, Heroku, and Eventbrite using the framework. 
+The backend is built on the **Django Rest Framework (DRF).** DRF provides a toolkit for building REST APIs. Key built in features include data serialization and Oauth1/Oauth2 support. DRF's flexibility also makes it easy to add new endpoints, ensuring that our API service can continue to expand as the product grows. DRF has been proven to work at scale, with large companies like Red Hat, Heroku, and Eventbrite using the framework. 
 
 ## Endpoints
 
