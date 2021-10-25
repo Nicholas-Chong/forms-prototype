@@ -14,8 +14,9 @@ The backend is built on the **Django Rest Framework (DRF).** DRF provides a tool
 | ------------- | ------------- |
 | GET /form | Retieves all the forms  |
 | POST /form | Creates a new form |
-| GET /form/{form id}  | Retrieves a sepcific form |
-| POST response/save_form_responses/ | Saves a list of new responses |
+| GET /form/{form id} | Retrieves a sepcific form |
+| POST /response/save_form_responses | Saves a list of new responses |
+| GET /response?form={form id}| Retrieves specific responses |
 
 ## Data Model
 
