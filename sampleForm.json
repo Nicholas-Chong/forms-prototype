@@ -1,0 +1,18 @@
+{
+    "prompts": [
+        {
+            "type_of": "boolean",
+            "is_required": true,
+            "prompt": "Are you taller than The Rock?",
+            "dependencies": []
+        },
+        {
+            "type_of": "text",
+            "is_required": true,
+            "prompt": "What country are you from?",
+            "dependencies": []
+        }
+    ],
+    "name": "The Test POST Form",
+    "creator": "Nicholas Chong"
+}
