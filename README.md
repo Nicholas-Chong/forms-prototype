@@ -2,6 +2,10 @@
 
 This project includes the prototype backend and frontend code for the Forms App.
 
+To start the API run ```python manage.py runserver```
+
+To start the frontend run ```npm run start```
+
 # Backend API
 
 ## Tech Stack
