@@ -37,9 +37,13 @@ The Dependency table holds a respective fields dependencies. It is effectively a
 
 The front end client is a **React Single Page Application (SPA).** 
 
+![](.github/form.png)
+
 ## Rendering the Form
 
 The SPA calls the backend ```/form/{form id}``` endpoint to retrieve a form. The form data is then parsed and rendered in React. 
+
+Sample form data:
 
 ```json
 {
@@ -65,6 +69,8 @@ The SPA calls the backend ```/form/{form id}``` endpoint to retrieve a form. The
 ## Collecting and Submitting Responses
 
 When a input field is modified, the SPA updates a list of responses. When the user submits the form, this list of responses is sent to the API via a POST request.
+
+Sample response data:
 
 ```json
 [
