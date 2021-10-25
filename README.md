@@ -36,7 +36,9 @@ The Dependency table holds a respective fields dependencies. It is effectively a
 
 # Front End React Client
 
-The front end client is a **React Single Page Application (SPA).** 
+The frontend client is a **React Single Page Application (SPA).** 
+
+(I know frontend wasnt technically part of the challenge, but I have a fun time building it out anyways :) )
 
 ![](.github/form.png)
 
