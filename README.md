@@ -30,7 +30,7 @@ This section will go over a few of the more complex/challenging decisions I made
 
 ### Storing Responses
 
-The initial design had the different types of responses stored in seperate tables (email, boolean, text, etc). This design ensured that the number of rows in each table would be relatively small, ensuring faster query speeds. However, it also resulted in a design in which several tables had the possibilty of being under utilized (ex. If the "boolean" response type turns out to be unpopular among users, the "boolean" table would be underutilized). 
+The initial design had the different types of responses stored in seperate tables (email, boolean, text, etc). This design ensured that the number of rows in each table would be relatively small, ensuring faster query speeds. However, it also resulted in a design in which several tables had the possibilty of being under utilized (ex. If the "boolean" response type turns out to be unpopular among users, the "boolean" table would be under utilized). 
 
 I decided it was not worth the complexity of storing different response types in seperate tables, and modified the design to store all responses in one table. 
 
