@@ -19,7 +19,7 @@ function App() {
 
   const fetchForm = async () => {
     const formDataReq = await fetch(
-      `http://127.0.0.1:8000${window.location.pathname}/`,
+      `http://127.0.0.1:8000/form${window.location.pathname}/`,
     );
     const formData: Form = await formDataReq.json();
 
