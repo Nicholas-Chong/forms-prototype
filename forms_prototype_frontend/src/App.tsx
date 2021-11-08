@@ -2,7 +2,7 @@ import { ChakraProvider, theme, Box, Stack, Button } from '@chakra-ui/react';
 import { FormHeader } from './components/FormHeader';
 import { FormField } from './components/FormField';
 import { Form } from './types/form';
-import { useState, useEffect, useRef, createContext } from 'react';
+import { useState, useEffect, useRef, useCallback, createContext } from 'react';
 
 export const FormContext = createContext({});
 
@@ -12,12 +12,7 @@ function App() {
   const [formSubTitle, setFormSubTitle] = useState('');
   const formResponse = useRef<any>([]);
 
-  useEffect(() => {
-    // Call api to fetch form data
-    fetchForm();
-  }, []);
-
-  const fetchForm = async () => {
+  const fetchForm = useCallback(async () => {
     const formDataReq = await fetch(
       `http://127.0.0.1:8000/form${window.location.pathname}/`,
     );
@@ -42,9 +37,14 @@ function App() {
       respondant: 1,
       field: prompt.id,
     }));
-  };
+  }, []); 
+  
+  useEffect(() => {
+    // Call api to fetch form data
+    fetchForm();
+  }, [fetchForm]);
 
-  const submitForm = async () => {
+  const submitForm = useCallback(async () => {
     fetch('http://127.0.0.1:8000/response/save_form_responses/', {
       method: 'POST',
       mode: 'cors',
@@ -53,7 +53,7 @@ function App() {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
-  };
+  }, []);
 
   return (
     <ChakraProvider theme={theme}>
